@@ -4,13 +4,15 @@ const main = async () => {
   await nftContract.deployed();
   console.log('Contract deployed to:', nftContract.address);
 
-  // Create the NFT.
-  let txn = await nftContract.makeAnEpicNFT();
-  await txn.wait();
-
-  // Create another NFT.
-  txn = await nftContract.makeAnEpicNFT();
-  await txn.wait();
+  // Create 7 NFTs.
+  for (let i = 0; i < 6; i++) {
+    try {
+      let txn = await nftContract.makeAnEpicNFT();
+      await txn.wait();
+    } catch (error) {
+      console.log(error);
+    }
+  }
 };
 
 const runMain = async () => {
@@ -23,4 +25,5 @@ const runMain = async () => {
   }
 };
 
+// Run the deploy 6 times to mint 6 NFTs.
 runMain();
