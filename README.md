@@ -1,15 +1,11 @@
-# Basic Sample Hardhat Project
+# Epic NFTs
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+Web3 app that allows you to mint NFTs on the Ethereum blockchain.
 
-Try running some of the following tasks:
+- Connect your Metamask wallet to the app
+- Mint a new NFT
+- Check it on Opensea
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+This repository is the backend part of this project, check the front-end [here](https://github.com/DumasOlivier/epic-nfts-front)
+
+This project was built following the [Builspace](https://buildspace.so/) track _"Mint your own NFT collection"_
